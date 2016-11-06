@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "name": "cube-demo",
+  "description": "Demo hybrid Three.js JS/PHP client-side app with PHPify",
+  "keywords": [
+    "php",
+    "phpify"
+  ],
+  "homepage": "https://github.com/uniter/cube",
+  "author": "Dan Phillimore <dan@ovms.co> (http://ovms.co)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uniter/cube-demo"
+  },
+  "bugs": {
+    "email": "dan@ovms.co",
+    "url": "http://github.com/uniter/cube-demo/issues"
+  },
+  "main": "index",
+  "scripts": {
+    "build": "mkdir -p dist && browserify -p bundle-collapser/plugin index | uglifyjs > dist/bundle.js",
+    "debug": "mkdir -p dist && browserify --debug index > dist/bundle.js",
+    "jshint": "jshint .",
+    "mocha": "mocha --recursive test/",
+    "test": "npm run jshint && npm run mocha"
+  },
+  "dependencies": {
+    "jquery": "^1.11.3",
+    "nowdoc": "^1.0.0",
+    "phpify": "~3",
+    "three": "^0.74.0"
+  },
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "bundle-collapser": "^1.2.1",
+    "chai": "^2.3.0",
+    "jshint": "^2.8.0",
+    "json-loader": "^0.5.4",
+    "mocha": "^2.2.5",
+    "sinon": "~1.15",
+    "sinon-chai": "^2.7.0",
+    "transform-loader": "^0.2.3",
+    "uglify-js": "^2.5.0",
+    "uglifyify": "^3.0.2",
+    "webpack": "^1.12.3"
+  },
+  "engines": {
+    "node": ">=0.6"
+  },
+  "license": "MIT",
+  "browserify": {
+    "transform": [
+      "phpify"
+    ]
+  },
+  "phpify": {
+    "phpToJS": {
+      "include": [
+        "php/**/*.php",
+        "vendor/autoload.php",
+        "vendor/composer/**/*.php"
+      ],
+      "sync": true
+    }
+  }
+}

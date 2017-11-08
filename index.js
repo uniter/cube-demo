@@ -23,7 +23,7 @@ phpEngine.getStderr().on('data', function (data) {
 (function () {
     var demoFactory = phpEngine.execute().getNative(),
         threeJS = require('three'),
-        demo = demoFactory.callMethod('create', window, threeJS, requestAnimationFrame);
+        demo = demoFactory.create(window, threeJS, requestAnimationFrame);
 
-    demo.callMethod('start');
+    demo.start();
 }());

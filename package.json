@@ -18,31 +18,24 @@
   },
   "main": "index",
   "scripts": {
-    "build": "mkdir -p dist && browserify -p bundle-collapser/plugin index | uglifyjs > dist/bundle.js",
-    "debug": "mkdir -p dist && browserify --debug index > dist/bundle.js",
-    "jshint": "jshint .",
-    "mocha": "mocha --recursive test/",
-    "test": "npm run jshint && npm run mocha"
+    "build": "webpack -p",
+    "debug": "webpack",
+    "start": "webpack-dev-server",
+    "jshint": "jshint ."
   },
   "dependencies": {
     "jquery": "^1.11.3",
     "nowdoc": "^1.0.0",
-    "phpify": "~3",
+    "phpify": "^4.0.0",
     "three": "^0.74.0"
   },
   "devDependencies": {
-    "browserify": "^11.0.1",
-    "bundle-collapser": "^1.2.1",
-    "chai": "^2.3.0",
     "jshint": "^2.8.0",
     "json-loader": "^0.5.4",
-    "mocha": "^2.2.5",
-    "sinon": "~1.15",
-    "sinon-chai": "^2.7.0",
+    "source-map-loader": "^0.2.3",
     "transform-loader": "^0.2.3",
-    "uglify-js": "^2.5.0",
-    "uglifyify": "^3.0.2",
-    "webpack": "^1.12.3"
+    "webpack": "^1.12.3",
+    "webpack-dev-server": "^1.16.5"
   },
   "engines": {
     "node": ">=0.6"

@@ -6,13 +6,12 @@ Getting started
 
 1. `npm install`
 2. `composer install`
-3. `npm run build`
-4. `Open /index.html` in a browser
+3. `npm start`
+4. `Open http://localhost:8080` in a browser
 
 Playing around
 --------------
-The PHP source code is in the `php/src/*` folder - dig in and make changes. Don't forget to rebuild
-your JS bundle with `npm run build` when you're done!
+The PHP source code is in the `php/src/*` folder - dig in and make changes.
 
 Debugging
 ---------

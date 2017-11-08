@@ -10,6 +10,11 @@ module.exports = {
       {
         test: /\.php$/,
         loader: 'transform?phpify'
+      },
+      {
+        test: /\.php$/,
+        loader: 'source-map-loader',
+        enforce: 'post'
       }
     ]
   },

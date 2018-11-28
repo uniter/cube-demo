@@ -26,7 +26,7 @@
   "dependencies": {
     "jquery": "^1.11.3",
     "nowdoc": "^1.0.0",
-    "phpify": "^4.0.0",
+    "phpify": "^4.0.1-experimental.3",
     "three": "^0.74.0"
   },
   "devDependencies": {

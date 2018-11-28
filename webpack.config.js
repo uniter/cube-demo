@@ -1,6 +1,7 @@
 module.exports = {
   context: __dirname,
   entry: './index',
+  devtool: 'source-map',
   module: {
     loaders: [
       {
@@ -9,7 +10,7 @@ module.exports = {
       },
       {
         test: /\.php$/,
-        loader: 'transform?phpify'
+        loader: 'transform-loader?phpify'
       },
       {
         test: /\.php$/,
@@ -19,7 +20,8 @@ module.exports = {
     ]
   },
   output: {
-    path: 'dist/',
-    filename: 'bundle.js'
+    path: __dirname + '/dist/',
+    filename: 'bundle.js',
+    publicPath: '/dist/' // For webpack-dev-server
   }
 };

@@ -67,9 +67,8 @@ class Demo
 
     private function drawFrame()
     {
-        // FIXME: Should be able to use `+=` here
-        $this->mesh->rotation->x = $this->mesh->rotation->x + 0.005;
-        $this->mesh->rotation->y = $this->mesh->rotation->y + 0.01;
+        $this->mesh->rotation->x += 0.005;
+        $this->mesh->rotation->y += 0.01;
 
         $this->renderer->render($this->scene, $this->camera);
 

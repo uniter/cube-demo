@@ -15,9 +15,11 @@ The PHP source code is in the `php/src/*` folder - dig in and make changes.
 
 Debugging
 ---------
-For a debugging build including source maps, use `npm run debug`.
+For a debugging build including source maps, use `npm start`
+and then visit [http://localhost:8080/](http://localhost:8080/).
 
 You should simply see a spinning 3d cube.
+Open the devtools up, search for `Demo.php` and set breakpoints in the PHP code.
 
 Keeping up to date
 ------------------

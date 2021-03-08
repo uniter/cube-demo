@@ -1,59 +1,38 @@
 {
   "version": "1.0.0",
   "name": "cube-demo",
-  "description": "Demo hybrid Three.js JS/PHP client-side app with PHPify",
+  "description": "Demo hybrid Three.js JS/PHP client-side app with Uniter-Loader",
   "keywords": [
     "php",
     "phpify"
   ],
   "homepage": "https://github.com/uniter/cube",
-  "author": "Dan Phillimore <dan@ovms.co> (http://ovms.co)",
+  "author": "Dan Phillimore <dan@ovms.co>",
   "repository": {
     "type": "git",
     "url": "https://github.com/uniter/cube-demo"
   },
   "bugs": {
     "email": "dan@ovms.co",
-    "url": "http://github.com/uniter/cube-demo/issues"
+    "url": "https://github.com/uniter/cube-demo/issues"
   },
   "main": "index",
   "scripts": {
-    "build": "webpack -p",
-    "debug": "webpack",
-    "start": "webpack-dev-server --devtool source-map",
+    "build": "webpack --mode=production --devtool=source-map --progress",
+    "debug": "webpack --mode=development --progress",
+    "start": "webpack serve --mode=development --devtool source-map",
     "jshint": "jshint ."
   },
   "dependencies": {
-    "jquery": "^1.11.3",
     "nowdoc": "^1.0.0",
-    "phpify": "^4.0.1-experimental.3",
-    "three": "^0.74.0"
+    "three": "^0.126.1"
   },
   "devDependencies": {
     "jshint": "^2.8.0",
-    "json-loader": "^0.5.4",
-    "source-map-loader": "^0.2.3",
-    "transform-loader": "^0.2.3",
-    "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4"
+    "uniter-loader": "^1.0.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
   },
-  "engines": {
-    "node": ">=0.6"
-  },
-  "license": "MIT",
-  "browserify": {
-    "transform": [
-      "phpify"
-    ]
-  },
-  "phpify": {
-    "phpToJS": {
-      "include": [
-        "php/**/*.php",
-        "vendor/autoload.php",
-        "vendor/composer/**/*.php"
-      ],
-      "sync": true
-    }
-  }
+  "license": "MIT"
 }

@@ -1,5 +1,5 @@
 /*
- * Demo hybrid Three.js JS/PHP client-side app with PHPify
+ * Demo hybrid Three.js JS/PHP client-side app with Uniter-Loader
  * Copyright (c) Dan Phillimore (asmblah)
  * https://github.com/uniter/cube-demo
  *
@@ -9,19 +9,11 @@
 
 'use strict';
 
-var phpEngine = require('./php/src/bootstrap.php')();
-
-// Write content HTML to the DOM
-phpEngine.getStdout().on('data', function (data) {
-    document.body.insertAdjacentHTML('beforeEnd', data + '<br>');
-});
-phpEngine.getStderr().on('data', function (data) {
-    document.body.insertAdjacentHTML('beforeEnd', data + '<br>');
-});
+var phpEngine = require('./php/src/bootstrap.php');
 
 // Go!
 (function () {
-    var demoFactory = phpEngine.execute().getNative(),
+    var demoFactory = phpEngine.getNative(),
         threeJS = require('three'),
         demo = demoFactory.create(window, threeJS, requestAnimationFrame);
 

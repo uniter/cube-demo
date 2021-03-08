@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Demo hybrid Three.js JS/PHP client-side app with PHPify
+ * Demo hybrid Three.js JS/PHP client-side app with Uniter-Loader
  * Copyright (c) Dan Phillimore (asmblah)
  * https://github.com/uniter/cube-demo
  *

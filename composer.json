@@ -1,6 +1,6 @@
 {
     "name": "uniter/cube-demo",
-    "description": "Demo hybrid Three.js JS/PHP client-side app with PHPify",
+    "description": "Demo hybrid Three.js JS/PHP client-side app with Uniter-Loader",
     "autoload": {
         "psr-4": {
             "Uniter\\Demo\\Cube\\": "php/src/"

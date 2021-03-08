@@ -4,9 +4,26 @@
         <meta charset="UTF-8">
 
         <title>Cube demo</title>
+
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .visually-hidden {
+                clip: rect(0 0 0 0);
+                clip-path: inset(50%);
+                height: 1px;
+                overflow: hidden;
+                position: absolute;
+                white-space: nowrap;
+                width: 1px;
+            }
+        </style>
     </head>
     <body>
-        <h1>Cube demo</h1>
+        <h1 class="visually-hidden">Cube demo</h1>
 
         <script src="dist/bundle.js"></script>
     </body>

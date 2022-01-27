@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "nowdoc": "^1.0.0",
-    "three": "^0.126.1"
+    "three": "^0.137.0"
   },
   "devDependencies": {
     "jshint": "^2.8.0",
